@@ -8,10 +8,15 @@
       "use strict"; 
 
 
-  const{tomorrow: {max: MaxTmrwCurrency}} = avgChange; 
+  const{tomorrow: {max: maxtmrwCurrency}} = avgChange; 
 
-  return MaxTmrwCurrency; 
+  return maxtmrwCurrency; 
 
 }
 
 console.log(getTmrwCurrency(currencyChange));
+
+
+
+//USing Destructuring Assignment to Assign Variables from Nested Objects
+//Using destructuring assignment to max of obtain avgChange.tomorrow and assigning it to maxtmrwCurrency.
