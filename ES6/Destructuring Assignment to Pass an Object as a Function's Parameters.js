@@ -1,6 +1,6 @@
 
-In this task I use destructuring assigment withtin the argument to the function "third" to send only max and min inside 
-the function 
+// In this task I use destructuring assigment withtin the argument to the function "third" to send only max and min inside 
+// the function 
 
 const GDP = {
     max: 56.78,
