@@ -59,9 +59,17 @@ if(accumulator.years || 0) > spy.years ? accumulator : spy;
 
 //{ id: 2, name: 'Temmin \'snap\' wexley', years: 30 }
 
+
+// We can also do this using Ternary operator. 
+
+let skingame = Spies.reduce((accumulator, eachSpy) => accumulator > eachSpy.years ? accumulator : eachSpy.years, 0);
+console.log(skingame)
+
 /*I could have named my accumulator anything but decided just to name it accumulator. My callback compares the accumulator to 
 each spy. If a spy has more years exprience that the the accumulator, then that spy becomes the new accumulator so that's the one 
-that will be returned and result being Temmin \'snap\' wexley with 30 years of exprience. */
+that will be returned and result being Temmin \'snap\' wexley with 30 years of exprience. 
+
+*/
 
 
 
