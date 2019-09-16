@@ -34,3 +34,14 @@ console.log(ninetiesCo);
   { id: 88, industry: 'ConsumerTech', start: 1993, end: 1998 } ] 
 
 */
+
+
+//Let's find a company that lasted five years 
+
+const fiveYears = companies.filter(stable => (stable.end - stable.start >= 3)); 
+console.log(fiveYears); 
+
+// result
+/*[ { id: 20, industry: 'BioTech', start: 1994, end: 1999 }, 
+  { id: 24, industry: 'FinTech', start: 1992, end: 1997 }, 
+  { id: 88, industry: 'ConsumerTech', start: 1993, end: 2004 } ] */
