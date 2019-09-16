@@ -14,9 +14,8 @@ console.log(arr); // [3, 4, 5, 7]
 const airplaneCount = [1,2,3,4,5,6,7,8,9,10];
 function removeFirstTwo(list) {
   "use strict";
-  // change code below this line
-  const  [a, b, ...arr] = [1,2,3,4,5,6,7,8,9,10]; ; // change this
-  // change code above this line
+  
+  const  [a, b, ...arr] = [1,2,3,4,5,6,7,8,9,10];
   return arr;
 }
 const arr = removeFirstTwo(airplaneCount);
