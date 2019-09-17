@@ -1,3 +1,6 @@
+//if you have an array, but only want some of the elements in it? That is where .filter() comes in!
+
+
 var companies = [
     {id: 20, industry: "BioTech", start: 1994, end: 1999 }, 
     {id: 24, industry: "FinTech", start: 1992, end: 1997}, 
