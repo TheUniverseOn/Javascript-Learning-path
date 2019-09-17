@@ -1,8 +1,8 @@
-The parseInt() Function parses a string And return and integer. Here is an example 
+//The parseInt() Function parses a string And return and integer. Here is an example 
 
 var a = parseInt("007"); 
 console.log(a) //7
 
-The above function converts the string “007” to an integer 7. 
-If the first character in the string can't be converted into a number, then it return NaN.
+/*The above function converts the string “007” to an integer 7. 
+If the first character in the string can't be converted into a number, then it return NaN. */
 
