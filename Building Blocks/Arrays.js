@@ -90,4 +90,14 @@ removeerror = pushedBytheBee.shift(); // [4, 6]
 
 
 
+/*manipulating Arrays with unshift() 
+
+Not only I can shift elements off of the begining of an array, I can also unshift elements to the 
+beginning of an array i.e add elements in front of the array 
+
+.unshift() works exactly like .push(), but instead of adding the element at the end of the array 
+, unshift() add the element at the beginign of the array. */
+
+var unshiftBytheBee = [1, 4, 6];
+unshiftBytheBee.unshift(["Tasks",35] //[ [ 'Tasks', 35 ], 1, 4, 6 ] 
 
