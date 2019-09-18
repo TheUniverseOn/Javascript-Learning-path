@@ -51,3 +51,10 @@ function marketingDep(win, report){
     return report(win, 10)
 }
 console.log(marketingDep(10, CEOs)) //100
+
+
+
+//callbacks are everywhere. You might have used them in this way 
+console.log([10, 15, 20].map((i) => i * 3.14))_ //[ 31.400000000000002, 47.1, 62.800000000000004 ] 
+
+
