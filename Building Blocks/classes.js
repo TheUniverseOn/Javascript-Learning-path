@@ -85,3 +85,12 @@ set mode(value){
 this._model = vaue; 
 }
 }
+
+..........................................................................................................................................
+var Spaceshuttle = function(targetPlanet){
+    this.targetPlanet = targetPlanet; 
+}
+
+var zeus = new Spaceshuttle('Juipiter');
+
+
