@@ -21,13 +21,26 @@ they will create. Inside the constructor, this refers to the new object it will 
 -Constructors define properties and behavious instead of returning a value as the other function might
  */
 
- function constructorr() {
+ function Builder() {
      this.name = 'Trump'; 
      this.years = 5; 
      this.buildingColor = "Gold"; 
  }
-let latestBuilding  = new constructorr; 
-console.log(latestBuilding)
+let trumpTower  = new Builder; 
+console.log(trumpTower)
 
+/* Notice that the new operator is used when calling a constructor. This tells javascript to create a new instance of Builder 
+called trumpTower. without "new" operator, "this" inside the constructor would not point to the newly created object, giving 
+unexpected results
 
+Now trumpTower has all the properties defined inside the builder constructo
+
+Just like any other object, its properties can be accessed and modified 
+*/
+
+et trumpTower  = new constructorr; 
+console.log(trumpTower)
+
+trumpTower.name = "The Golden Tower"; 
+console.log(trumpTower.name); // The Golden Tower
 
