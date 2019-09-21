@@ -68,3 +68,15 @@ let result = quoteSample.match(myRegex); //
   'o', 
   's' ] 
 
+
+
+
+/*To create a negated character set, you place a caretcharacter (^) after the opening bracket and before the characters 
+ you do not want to match.
+
+For example, /[^aeiou]/gimatches all characters that are not a vowel. Note that characters like ., !, [, @, /and white space are matched -
+                                               the negated vowel character set only excludes the vowel characters. */
+
+let str = 'hsduhsa8w73873738383 3833873'; 
+let strRegex = /[0-3aeiou]/gi; 
+console.log(str.match(strRegex))
