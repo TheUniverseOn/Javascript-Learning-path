@@ -40,3 +40,31 @@ console.log(extractor.match(vowelRegex)); //
   'e', 
   'd' ] 
 
+
+
+
+//It's not limited to strings only. we can also return numbers like this i.e to find egex that matches 
+//a range of letters between hand s, and a range of numbers between 2and 6
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi; // 
+let result = quoteSample.match(myRegex); //
+
+
+[ 'l', 
+  'r', 
+  'r', 
+  '3', 
+  '4', 
+  '5', 
+  '2', 
+  '6', 
+  '5', 
+  '3', 
+  's', 
+  'r', 
+  'l', 
+  'i', 
+  'i', 
+  'o', 
+  's' ] 
+
