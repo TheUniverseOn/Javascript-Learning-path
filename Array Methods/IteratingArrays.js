@@ -17,3 +17,8 @@ var pyramids = [1, 2, 4, 5, 6, 7];
 console.log(pyramids.length) //
 
 
+const mapped = fruits.map((item, index) => {
+    console.log(index); //0 1 2 3 4 5
+    return item + ' ' + index;
+});
+console.log(map) //[ 'Apple 0', 'Banana 1', 'kiwi 2', 'Mango 3', 'Pineapple 4', 'Grapes 5' ]
