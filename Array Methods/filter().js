@@ -2,7 +2,7 @@
 //the provided function.
 
 var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-console.log(result = words.filter(word => word.length > 10))
+console.log(result = words.filter(word => word.length > 10)) //'destruction'
 
 
 function bigEnough(value){
@@ -10,4 +10,4 @@ function bigEnough(value){
 }
 
 var filtered = [12, 5, 8, 130, 44].filter(bigEnough)
-console.log(filtered)
+console.log(filtered) //[ 12, 130, 44 ]
