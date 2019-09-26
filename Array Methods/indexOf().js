@@ -1,5 +1,8 @@
-//find the index of an item in the array 
+//The indexOf() methods returns the first index at which a given element can be found 
+// in the array, or -1 if is not present
 
-var fruits =  [ 'blackberry', 'Banana', 'kiwi', 'Mango', 'Pineapple', 'Grapes' ]*/
-var pos = fruits.indexOf('Banana'); 
-console.log(pos)//1
+function animals(place){
+    return place
+}
+var beasts =  ['ant', 'bison', 'camel', 'duck', 'bison'].indexOf('camel');
+console.log(beasts) //2
