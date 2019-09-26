@@ -6,4 +6,4 @@ function Albums(){
 
 
 var joinTheAlbums = ['When I was 19', 'techno', 'worlder'].join(',');
-console.log(joinTheAlbums); 
+console.log(joinTheAlbums); //When I was 19,techno,worlder 
