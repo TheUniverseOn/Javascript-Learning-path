@@ -11,3 +11,15 @@ function bigEnough(value){
 
 var filtered = [12, 5, 8, 130, 44].filter(bigEnough)
 console.log(filtered) //[ 12, 130, 44 ]
+
+
+
+// Appending new words
+word = ['spray', 'limit', 'exuberant', 'destruction','elite', 'prsent'];
+const Addwords = word.filter((word,index,array)=>{
+array.push('new') 
+return word.length < 6
+})
+
+/// Only three fits the condition even though the `words` itself now has a
+//lot more words with character length less than 6
