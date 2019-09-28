@@ -16,5 +16,5 @@ slice does not alter the original array. It returns a shallow copy of elements f
 function sliced(value){
     return value 
 }
-var stringArray = ['Blue', 'Humpback', 'Beluga'].slice(-2);
-console.log(stringArray)
+var stringArray = ['Blue', 'Humpback', 'Beluga'].slice(1, 2);
+console.log(stringArray)//[ 'Humpback' ] 
