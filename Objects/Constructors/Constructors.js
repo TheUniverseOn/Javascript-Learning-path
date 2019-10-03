@@ -85,3 +85,26 @@ console.log(cardinal)//Bird { name: 'Cardie', color: 'red', numLegs: 2 } 
  * on shared characteristics and behaviour and define a blue print that automates their creation
   */
 
+
+
+
+//Verify an Obect's Constrcutor with instanceof
+
+  /** Anytime a construcotr function creates a new object, that object is said to be an
+   * instance of its constrcutor. javascript gives a convenient way to verify this with the instanceOf operator. 
+   * instanceOf allows you to compare an object to a constructor, returning 
+   * true or false based on whether or not that object was created with the constructor. 
+   * 
+   */
+
+//     function Bird(name, color){
+//      this.name = name; 
+//      this.color = color; 
+//      this.numLegs = 2; 
+//  } 
+let crow = new Bird('Alexis',  'Black'); 
+console.log(crow instanceof Bird); //true
+
+/** If an object is created without using  a constrcutor, instanceof will veriffy that it is not 
+ * an instance of that constructor
+ */
