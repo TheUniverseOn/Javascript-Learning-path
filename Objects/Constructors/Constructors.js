@@ -108,3 +108,32 @@ console.log(crow instanceof Bird); //true
 /** If an object is created without using  a constrcutor, instanceof will veriffy that it is not 
  * an instance of that constructor
  */
+
+
+
+
+
+ //Understand own properties 
+
+ // In the following example, the  building constructor defines two properties: name and numFloors' 
+
+ function Building(name){
+     this.name = name; 
+     this.numFloors = 4; 
+ }
+ let downTown = new Building('TheModernHouse')
+ console.log(downTown)//Building { name: 'TheModernHouse', numFloors: 4 } 
+ /** name and numFloors are called own properties, because they are defined directly on the instance object. That means that 
+  * downTown has its own separate copy of these properties
+  * In fact every instance of Building will have its own copy of these properties 
+  * The following code adds all the own properties of downTown to array ownProps: 
+  */
+ 
+ let ownProps = []; 
+ for(let property in downTown){
+     if(downTown.hasOwnProperty(property)){
+         ownProps.push(property)
+
+     }
+ }
+ console.log(ownProps) //[ 'name', 'numFloors' ] 
