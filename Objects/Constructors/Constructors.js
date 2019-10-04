@@ -137,3 +137,44 @@ console.log(crow instanceof Bird); //true
      }
  }
  console.log(ownProps) //[ 'name', 'numFloors' ] 
+
+
+
+ /** Use Prototype properties to reduce duplicate code 
+  * Since numFloors will probably have the same for all instances of  Building, you essentially have a duplicated 
+  * variable numFloors inside each  Building instance
+  * 
+  * This may not be an issue when there are only two instances, but imagine if there are millions of instances. That would be a lot of duplicated variables. 
+  * 
+  * A better way is to use Building's prototype. The prototype is an object that is shared among ALL instances of Building. Here's how 
+  * to add numFloors to the  Building prototype: 
+  * 
+  * 
+ */
+ Building.prototype.numFloors = 4; 
+
+ //Now all instances of  Building have the numFloors property. 
+
+ console.log(downTown.numFloors); //4 
+ console.log(suburb.numFloors); //4
+
+ function Doggie(name) {
+    this.name = name;
+  }
+  Doggie.prototype.numLeg = 4; 
+  let beagle = new Doggie('Snoop'); 
+  console.log(beagle)
+  console.log(beagle.numLeg)//4
+  let  GermanShepered  = new Doggie('jack'); 
+  console.log(GermanShepered.numLeg)//4
+
+
+
+  /** We have now seen two types of properties: own properties and prototype properties. Own properties are defined on object 
+   * instance itself. And prototype properties are defined on the prototype
+   */
+
+   function Birdiee(name){
+       this.name = name; //own property
+   }
+
