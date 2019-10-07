@@ -317,3 +317,246 @@ var cc = "1, 2, 3";
 console.log(aa ==cc);//false
 console.log(bb == cc);//false
 console.log(aa == bb); //false
+
+
+// /* Function Scopes 
+
+// You use the var keyword to declare a varibale that will belong to the current 
+// function scope, or the global scope if at the top level outside of any function 
+
+
+
+
+// Hoisting 
+
+// Wherever a var appears inside a scope, that declaration is taken to belong to the 
+// enitre scope and accessible everywhere throughout. 
+
+
+// In a metaphor term, this characterstics is known as Hositing, when a var declaration is conceptually 
+// "moved" to the top of its enclosing scope. Technically, this process is more accurately explained by how code is 
+// compiled, 
+
+// Consider this example 
+
+// */ 
+
+var num = 2; 
+foo();  
+
+function foo(){             // works because `foo()`
+// declaration is "hoisted'
+  num = 3; 
+  console.log(num ) //3
+  var num;                //declaration is 'hoisted'to the top of `foo()`
+}
+console.log(num); //2
+
+
+
+/* Nested Scopes 
+
+When you declare a variable, it is available anywhere in that scope, as well as 
+any lower/inner scopes . For example */
+
+
+function scoped() {
+  var a = 1; 
+
+  function bar(){
+    var b  = 2; 
+
+    function baz(){
+      var c = 3; 
+
+      console.log(a, b,c ); //1 2 3
+    }
+
+    baz(); 
+    console.log(a, b); //2
+  }
+
+  bar(); 
+  console.log(a); //1
+}
+
+scoped(); 
+
+/* Notice that  c is not available inside of bar(0, because it's declared only 
+inside the inner baz() scope, and that b is not available to foo() for the same reason . 
+
+if you try to access a variable's value in a scope where it's not available, you will 
+get a ReferenceError thrown. If you try to set a variable that has not been decalred. you will 
+either end u( p creating  avariable in the top-level global scope(bad!) or getting an error. depending on 
+'stric mode'. Let's look at an example
+
+
+*/
+"strict mode"
+function foo(){
+  
+  a = 1; 
+  console.log(a);//`a` is not formally declared 
+}
+
+foo(); 
+a; //1 --oops, autho global variable 
+
+/* The above code is very bad practice. Don't do it! Always formally declare your variables
+ In addition to creatinf declarations for variables at the function level, ES6 lets you 
+ declare variables to belong to individual blocks(pairs of {..}, using the let 
+  keyword. Besides some nuanced details 
+  , the scoping rules will behave roughly the same as we just saw) with fucntions  */
+
+
+  function numB (){
+    var a = 1; 
+
+    if( a >= 1){
+      var b = 2; 
+
+      while(b < 5){
+        var c = b * 2; 
+        b++
+
+console.log( a + c) //5, 7, 9
+      }
+    }
+  }
+
+numB();
+
+/* Because of using let instead of var, b will belong only to the 
+if statement and thus not to the whole foo() function's scope.
+ Similarly, c belongs only to the while loop.
+  Block scoping is very useful for managing your variable scopes 
+  in a more fine-grained fashion, which can make your code much
+   easier to maintain over time. 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   Conditionals 
+   
+   In addition to the if statement we introduced briefly in Chapter 1, JS provides 
+   a few other conditionals mechanisms that we should know about 
+   
+   
+   Sometimes you may find yourself writing a series of if...else...if statements like 
+   this*/
+
+   if(a == 2){
+     //do something 
+   }
+
+   else if(a == 10){
+     //do another thing
+   }
+   else if (a == 42){
+     //do yet another thing 
+   }
+   else {
+     //fallback to here. 
+   }
+   
+
+   /* This strucuture works, but it's a little verbose because you need to 
+   specify the a test for each case. Here's another option, the switch statement
+
+
+   
+    */
+   
+   */
+  
+  switch (a) {
+    case 2:
+      // do something
+      return a * 3
+      break;
+    case 10:
+      // do another thing
+      break;
+    case 42:
+      // do yet another thing
+      break;
+    default:
+      // fallback to here
+  }
+
+  /* The break; is important if you want only the statement(s) in one case
+  to run. If you omit break from a case, and that case matches or runs, execution will 
+  continue with the next case's statements regardless of that case matching. This is called 'fall through" is sometimes useful/desired.  */
+
+
+  switch (a){
+    case 2: 
+    case 10: 
+    //some cool stuff
+    break; 
+    case 42:
+    //other stuff 
+    break;
+    default: 
+    //fallback here
+  }
+
+
+
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+
+  /* Here, if a is either 2 or 10, it will execute the 'some cool stuff' code statements. 
+  
+  Another form of conditional in JS is the 'conditional operator', often called 
+  'ternary operator' it's like a more concise form of single if..else statement, such as: 
+   */
+
+   var number = 42; 
+
+   var b = (number > 41)  ? 'Hello' : 'world'; 
+
+   console.log(b) //Hello
+   // similar to:
+
+// if (a > 41) {
+//    b = "hello";
+// }
+// else {
+//    b = "world";
+// }
+
+/* If the test expression (a > 41 here) evaluates as true, the first caluse ('hello') results, 
+otherwise the second caluse ('world') results, and whatever the result is then gets
+assigned to b. 
+
+The conditional operator doesn't have to be used in an assignement, but that's defintetly 
+the most common usage. 
+*/
