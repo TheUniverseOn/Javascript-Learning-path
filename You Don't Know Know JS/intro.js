@@ -560,3 +560,310 @@ assigned to b.
 The conditional operator doesn't have to be used in an assignement, but that's defintetly 
 the most common usage. 
 */
+
+
+
+/* Strict  */
+/* ES5 added a 'strict mode ' to the language, which tightens the rules for certain behaviours. Generally, these 
+restrictions are seen as keeping the code to a safer and more appropriate set of  guidelines. Alos, adhering to strict mode 
+makes your code generally more optimizable by the engine. Strict mode is a big win for cod and you should use it for all 
+your programs
+
+You can opt in to strict mode for an individual function, or an entire file, depending on where 
+you can put the strict mode pragma: .  */
+
+
+function foo(){
+  "use strict"; 
+  //this code is strict mode
+
+  function bar(){
+    //this code is strict mode 
+  }
+}
+
+//this code is not strict mode 
+
+
+// compare that to
+
+// "use strict"; 
+// function foo(){
+
+//   //this code is strict mode
+
+//   function bar(){
+//     //this code is strict mode 
+//   }
+// }
+
+ 
+// var a = 1;
+// b = 2;
+
+
+// delete this.a;
+// delete this.b; 
+
+// console.log(a)
+// console.log(b)
+
+
+//this code is  strict mode 
+
+/*One key difference(improvement) with strict mode is diallowing the implicit auto-global variable declaration from ommiting the var: */
+
+
+
+//Declared vs Undeclared variables
+
+// function variabless(){
+//   undeclaredVar = 'hello world, I am here and I am also globally accessible. '; 
+//   var hellIamhere = 'hello world, I am here and I cant go anywhere';
+  
+//   }
+  
+//   variabless()
+//   console.log(undeclaredVar); // hello world
+//   console.log(hellIamhere);//declaredVar is not defined 
+  
+//   delete this.declaredVar
+//   console.log(declaredVar)
+  
+
+  /* FUNCTIONS as values  
+  
+  So far, we've discussed functions as the primary mechanism of scope in Javascript. 
+  You recall typical function declaration syntax as follows */
+
+  function name(){
+
+  }
+
+  /* I came to realisation that name is basically just a variable in the outer enclosing 
+  scope that's given a reference to the function being declared. Therefore, the function itself
+  is a value,  just like any value i.e 42 or [1, 3, 5]
+  
+The outcome of realising is made me think I can pass a value(argument) to a function, but a function 
+itself can be a value that's assigned to variables or passed to or 
+returned from other functions
+
+As such, a function value should be thought of as an expression, much like any other value or 
+expression
+
+Example */
+
+// var nameX = function(){
+
+// }; 
+
+
+// var ourUser = function userName(){
+
+// }; 
+
+/* The first function expression assigned to the nameX variable is called anonmous function 
+because it has no name 
+
+
+The second function expression is called Named function(userName), it also has reference assigned to
+the ourUser variable.   */
+
+
+
+/* Immediately Invoked function Expressions(IIFEs)
+
+In the above snippet, neither of the function expressions are executed -- if we were to execute them we could just 
+do nameX() or ourUser(), for example.
+
+There is another way to execute a function expression also, which is typically referred to 
+as an immediately invoked function expression(IIFE) which sounds like a cool urban fashion brand name. 
+ 
+})()*/
+(function IIFE()
+{ console.log( "Hello, I am being IIFEd!" );//Hello, I am being IIFEd! 
+})();
+
+/* What's happening here is that, the outer (..) that is surrounding the (function IFFE(){..}) function 
+expression is just Javascript understanding and preventing the function from 
+being treated like any normal function declaration. 
+
+The final () on the end of the expression --the })(); line -- is what actually executed the function 
+expression referenced immediately before it. 
+
+It did look strange to me, however if you look at the similarties the code below is makes more sense*/
+
+function notIIFE(){
+
+}
+//notIIFE function reference expression 
+//then () executes it. 
+notIIFE(); 
+
+(function IIFE(){
+
+})
+
+//IIFE function expression 
+//then () executes it 
+(); 
+
+/* As you can see, listing the (function IIFE(){..}}) before it's beeing executed with () is 
+basically the same as including notIIFE beofre its executing (); in both cases, the function 
+reference is executed with () immediately after it 
+
+Because an IIFE is just a function, and functions create variable scope, using an IIFE  
+in this way is to enable you to declate variables that won't affect the surrounding 
+code outside of the IIFE*/
+
+var num = 42; 
+(function IIFE(){
+  var num  = 20; 
+  console.log(num); //20
+})(); 
+
+console.log(num); //42
+//IIFE can also have return values; 
+
+var num = (function IIFE(){
+  return 42; 
+})()
+
+console.log(num); //42
+
+/* The 42 values gets returned from the IIFE-named function being executed, and then 
+assigned to num  
+
+Closure
+
+Closure is the least misunderstood and also the most important topics in Javascript.
+
+In a very simplistic term, you can think of Closure as a way to 'remember' and continue to 
+access a function's scope(its variables) even once the function has finished running 
+
+Let's examine this with example */
+
+function makeAdder(x){
+  //parameter 'x' is an inner variable 
+
+  
+function add(y){ 
+  return y + x;    //inner function 'add() uses x, so it has a "closure" over it. 
+}
+  return add; 
+}
+ 
+/* The reference to inner add(..) function that gets returned with each call 
+to the outer makeAdder(..) is able to remember whatever x value was passed in to makeAdder(..). 
+Let's see this by using makeAdder(...)*/
+
+var plusOne = makeAdder(1); 
+
+/**  'plus one' gets a reference to the inner 'add(..)'
+ * function with cloure over the 'x' parameter of the outer 'makeAdder(..);
+ * 
+ * 
+ */
+
+var plusTen = makeAdder(10); 
+/** 'plusTen' gets a reference to the inner 'add(..' function with closure over the 'x' parameter of the 
+ * outer 'makeAdder(..); 
+ */
+
+  console.log(plusOne(3)); //4
+  console.log(plusTen(10))
+
+  /** How does this work 
+   * When we call makeAdder(1); we get back a reference to its inner add(..) that remembers 
+   * x as 1;. We call this function reference plusOne(..). 
+   * 
+   * When we call makeAdder(10), we get back another reference to its inner add(..) that
+   * remembers x as 1. We call this function reference plusTen
+   * 
+   * When we call plusOne(3), it added 3(its inner y) to the 1(remembered by x), and we get 4
+   * 
+   * When we call plusTen(13), it adds 13 its inner y) to the 10 remebered by x) and we get 23. 
+   */
+
+   /* Modules
+   
+   The most common usage of closure in JS is the modules pattern. Modules let you define private 
+   implementation details(variables, functions) that are hidden from the outside world, as 
+   well as a public API that is accessible from the outside. 
+   
+   Example 
+   
+   */
+
+   function User(){
+     var username, password; 
+
+     function doLogin(user, pw){
+       username = user; 
+       password = pw; 
+
+       var publicAPI = {
+         login: doLogin
+       }; 
+       return publicAPI; 
+     }
+
+     //create a user module instance
+     var fred = User(); 
+     fred.login('fred', '123444'); 
+
+
+   }
+
+
+
+   /* The User() function serves as an outer scope that holds the varibles 
+   username and password, as well as the inner doLogin() function; these are all private inner 
+   details of this User module that cannot be accesses from the outside world. 
+   
+   Executing User() creates an instance of the User module - a whole new scope is created, 
+   and thus a whole new copy of each of these inner variables/functions. We assign this instance to 
+   fred. If we run User() again, we'ld get a new instance entirely separate from fred
+   
+   The inner doLogin() function has a closure over username and password, meaning it will 
+   retain its access to them even after the User() function finsihes running
+   
+   publicAPI is an object with one property/method on it, login, which is a reference 
+   to the inner doLogin() function. When we return publicAPI from User(), it becomes an 
+   instance we call fred
+   
+   At this point, the outer User() function has finished executin Normally, you'ld think the inner
+   variables like username and password have gone away. But here they have not, because 
+   there's a closyre in the login() function keeping them alive
+   
+   That's why we can call fred.login(..)-- the same as calling inner doLogin(..) --and it can still 
+   access username and password variables*/
+
+
+
+
+
+
+   /* Prototype
+   
+   When you reference a property on an object, if that property doesn't exist, JS will 
+   automatically use that object's internal prototype reference to find another object to look 
+   for the property on. 
+   You could think of this almost as a fallback if the property is missing
+   
+   The internal prototype reference linkage from one objects to its fall back happens at 
+   the time the object is created. The simplest way to illustrate it is with a built in utility called Object.create(..)
+   
+   
+   */
+
+   var foo = {
+     a: 42
+   }; 
+
+   //create 'bar' and link it to 'foo
+   var bar = Object.create(foo); 
+
+   bar.b = 'Hello world!'; 
+   console.log(bar.b); 
+   console.log(bar.a); 
