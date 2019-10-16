@@ -39,6 +39,13 @@ function a (){
          console.log(foo.doAnother()); //1!2!3 
 
 
+
+
+// lexical scope 
+//block scope 
+
+
+
 /* Here, In the above example. We just turned our module function into an IIFE, and we immediately invoked it and assigned 
          // its return value directly to our single module instance identifier foo. 
          * 
