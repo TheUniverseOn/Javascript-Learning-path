@@ -867,3 +867,33 @@ var plusTen = makeAdder(10);
    bar.b = 'Hello world!'; 
    console.log(bar.b); 
    console.log(bar.a); 
+
+
+
+
+
+
+
+Use new: 
+
+Object(0
+Array()
+Function()
+Date()
+RegExp()
+Error()
+
+Examples: 
+
+var yesterday = new Date('October 17, 2019');
+yesterday.toUTCString(); 
+//"Wed, 16 Oct 2019 23:00:00 GMT“
+
+
+
+Don’t use New!
+
+String()
+Number()
+Boolean()
+
