@@ -60,3 +60,58 @@ console.log(data.count);
   }
 
   console.log(workshop.ask('what is it?'))
+
+
+
+
+   /** Implicit Binding 
+       * Explicit Binding
+       * new Binding 
+       * Window Binding 
+       * 
+       * The first questions one need to ask when you are trying to 
+       * figure out what this keyowrd is that, where is this function invoked?
+       * 
+       */
+
+
+       /** Implicit `Binding 
+        * Left of the Dot at Call Time 
+        */
+
+    //    var me = {
+    //     name: 'sophonias', 
+    //     age: 23, 
+    //     sayName: function(){
+    //       return (this.name);
+    //     }
+    //   }
+
+    // console.log(me.sayName());//sophonias
+
+
+
+    var sayNameCom = function(obj){
+        obj.sayName = function(){
+            return (this.name);
+        } ;
+
+    };
+
+    var me = {
+        name: 'sophonias', 
+        age: 23, 
+
+    }; 
+
+    var you = {
+        name: 'Reader', 
+        age: 23, 
+
+    }; 
+
+sayNameCom(me); 
+sayNameCom(you)
+
+console.log(me.sayName()); //sophonias
+console.log(you.sayName());//Reader
