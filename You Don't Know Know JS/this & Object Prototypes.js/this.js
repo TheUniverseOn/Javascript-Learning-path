@@ -79,15 +79,15 @@ console.log(data.count);
         * Left of the Dot at Call Time 
         */
 
-    //    var me = {
-    //     name: 'sophonias', 
-    //     age: 23, 
-    //     sayName: function(){
-    //       return (this.name);
-    //     }
-    //   }
+       var me = {
+        name: 'sophonias', 
+        age: 23, 
+        sayName: function(){
+          return (this.name);
+        }
+      }
 
-    // console.log(me.sayName());//sophonias
+    console.log(me.sayName());//sophonias
 
 
 
