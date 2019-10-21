@@ -1,4 +1,4 @@
-Recursion is when you define something in terms of itself. I.e What is a human being? A human is a being. That would be a 
+/*Recursion is when you define something in terms of itself. I.e What is a human being? A human is a being. That would be a 
 recurive defintion. 
 In Computer Science Recursive is when a function calls itself. Altough, it maintains the state at different levels of recursion,
 it also has a disadvantage that inherently leaves a large footprint as every function  call adds another call to the stack. Therefore,
@@ -8,3 +8,4 @@ be favorable than performance so recursion can also make sense to use. Always fa
 
 
 Fibonacci is a good use case for Recursion, as the rule of fibonacci is adding to two previous terms together. 
+*/
