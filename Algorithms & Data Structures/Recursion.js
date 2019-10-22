@@ -7,5 +7,19 @@ be favorable than performance so recursion can also make sense to use. Always fa
 
 
 
-Fibonacci is a good use case for Recursion, as the rule of fibonacci is adding to two previous terms together. 
+Fibonacci and factorial are good examples to use to show the power of Recursion. 
 */
+
+
+function factorial(number){
+  if(number === 1){
+    return number; 
+  
+} else {
+return number * factorial(number-1) 
+  
+}
+}
+  
+console.log(factorial(10)) //3628800
+console.log(factorial(5)) //120
