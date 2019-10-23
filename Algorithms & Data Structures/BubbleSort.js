@@ -29,3 +29,31 @@ function bubbleSort(arr){
     }
     
 bubbleSort([14, 33, 27, 35, 10, 56, 101 ]); //[ 10, 14, 27, 33, 35, 56, 101 ]
+
+
+function bubbleSort7(z){
+    const loop = z.length; 
+       
+       for(i = 0; i < loop; i++){
+           
+           //loop through the loop 
+           
+           for(k = 0; k < loop; k++){
+               //compare z array 
+               if(z[k] > z[k+1]){
+
+
+               let current = z[k];
+                  z[k] = z[k+1]; 
+                   z[k+1] = current; 
+              
+                     }
+                     }
+   }
+                     console.log(z); //[ 12, 30, 40, 70, 90, 99, 100 ]
+                     return z; 
+                     }     
+                     
+                     
+                     
+bubbleSort7([100,99, 12, 30, 40, 70, 90])
