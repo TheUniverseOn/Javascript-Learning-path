@@ -37,4 +37,4 @@ function factorial(x) {
   return z * factorial ( x-1) 
 }
 
-console.log(factorial(3))
+console.log(factorial(3)) //6
