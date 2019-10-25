@@ -1,4 +1,4 @@
-There are few reasons why arrays are not always the best data stucture to use for rganisign data. 
+/* There are few reasons why arrays are not always the best data stucture to use for rganisign data. 
 In many programming lanagauges, arrays are fixed in length, so it is hard to 
 add new data when the last element of the array is reached. Adding and removing data 
 from array is also difficult because you have to move aray elements up or down to reflect 
@@ -27,3 +27,67 @@ Many  linked lists include a special node, called the head, to denote the begini
 
 Header -> MILk -> Bread -> Eggs -> Bacon -> null
 
+*/
+
+
+
+// const n1 = {
+//     data: 100
+//    }
+
+// const n2 = {
+//     data: 200
+// }
+
+// n1.next = n2; 
+// console.log(n1); //{ data: 100, next: { data: 200 } } 
+
+
+class Node{
+    constructor(data, next = null){
+        this.data = data; 
+        this.next = next; 
+    }
+}
+
+// const n1 = new Node(100); 
+// console.log(n1); //Node { data: 100, next: null }  //
+
+
+class LinkedList{
+    constructor(){
+    this.head = null; 
+    this.size = 0; 
+}
+//insert first node
+insertFirst(data){
+    this.head = new Node(data, this.head); 
+}
+//insert last node
+
+//insert an index
+
+//get at index
+
+//remove an index
+
+//clear the list 
+
+//print list data
+printListData(){
+    let current = this.head; 
+
+    while(current){
+        console.log(current.data);
+        current = current.next; 
+    }
+}
+}
+const ll = new LinkedList(); 
+ll.insertFirst(100);
+
+ll.insertFirst(200);
+ll.insertFirst(300);
+console.log(ll);/*LinkedList { head: Node { data: 200, next: Node { data: 100, next: null } }, 
+size: 0 } */
+ll.printListData() //300, 200, 100 
