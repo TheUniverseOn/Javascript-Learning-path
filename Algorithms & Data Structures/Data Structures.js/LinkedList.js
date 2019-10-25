@@ -25,69 +25,13 @@ used as a hook for entry into a linked list). Something else to notice in the fi
 mark the end of a linked list by pointing to a null node. 
 Many  linked lists include a special node, called the head, to denote the begining of a linked list. 
 
-Header -> MILk -> Bread -> Eggs -> Bacon -> null
+Header -> MILk -> Bread -> Eggs -> Bacon -> null  
 
+An object based linked List design 
+
+Example: 
 */
 
-
-
-// const n1 = {
-//     data: 100
-//    }
-
-// const n2 = {
-//     data: 200
-// }
-
-// n1.next = n2; 
-// console.log(n1); //{ data: 100, next: { data: 200 } } 
-
-
-class Node{
-    constructor(data, next = null){
-        this.data = data; 
-        this.next = next; 
-    }
+const n1 = {
+ data: 100
 }
-
-// const n1 = new Node(100); 
-// console.log(n1); //Node { data: 100, next: null }  //
-
-
-class LinkedList{
-    constructor(){
-    this.head = null; 
-    this.size = 0; 
-}
-//insert first node
-insertFirst(data){
-    this.head = new Node(data, this.head); 
-}
-//insert last node
-
-//insert an index
-
-//get at index
-
-//remove an index
-
-//clear the list 
-
-//print list data
-printListData(){
-    let current = this.head; 
-
-    while(current){
-        console.log(current.data);
-        current = current.next; 
-    }
-}
-}
-const ll = new LinkedList(); 
-ll.insertFirst(100);
-
-ll.insertFirst(200);
-ll.insertFirst(300);
-console.log(ll);/*LinkedList { head: Node { data: 200, next: Node { data: 100, next: null } }, 
-size: 0 } */
-ll.printListData() //300, 200, 100 
