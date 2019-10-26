@@ -115,3 +115,30 @@ sayNameCom(you)
 
 console.log(me.sayName()); //sophonias
 console.log(you.sayName());//Reader
+
+
+
+
+
+
+
+function Vehicles(foundedDate) {
+    console.log(this.carName, foundedDate) //Tesla was founded 1 July 2003 
+    //Land Rover was founded in 1978 
+    
+}
+
+
+var car1 = {
+carName: "Tesla", 
+Vehicles: Vehicles, 
+}
+
+var car2 = {
+carName: "Land Rover", 
+Vehicles: Vehicles, 
+}
+
+
+car1.Vehicles("was founded 1 July 2003")
+car2.Vehicles("was founded in 1978") //
