@@ -3,7 +3,7 @@
  * functions: push, pop, peek, length
 */
 
-
+//FIFO : first in first out
 //basic usage of stack using array 
 var letters = []; 
 
