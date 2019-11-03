@@ -27,3 +27,10 @@ if(reverseWord === word){
     console.log(word + " is not a palindrome");
 }
 
+//stack methods 
+/* push()
+pop()
+peek()
+clear()
+isEmpty()
+size()*/
