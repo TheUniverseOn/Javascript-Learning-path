@@ -39,3 +39,13 @@ myPromise.then(result => {
 })
   
  //result comes from the argument given to the resolve method
+  
+  
+  /* handling a rejected promise with catch
+  catch is a method used when your promise has been rejected. It is executed immediately after a promise's reject method 
+  is called. Here is the sytanx*/
+  
+  myPromise.catch(error => {
+    console.log(error)
+  })
+//error is the argument passed into the reject method
