@@ -13,7 +13,8 @@ used to do this. resolve is used when you want your promise to succeed, and reje
 methods that take an argument, as you can see below: 
 
 const myPromise = new Promise((resolve, reject) =>{
-if(condition here){
+  let responseFromServer;
+if(responseFromServer;){
 resolve("promise was fulfilled " ); 
 }else {
 reject("promise was rejected");
