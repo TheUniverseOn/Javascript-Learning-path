@@ -35,3 +35,58 @@ Example:
 const n1 = {
  data: 100
 }
+
+
+/* A linked list is a squential collectios of elements. Each element is  called a node. Each node has two pieces of informatio 
+Data value itself and a pointer that references the next node in the list. 
+1. The length list has a head and a tail 
+Head node points to the next node and and the next node points to the next node untilwe reach the tail node. This is a singlly 
+linked list. 
+A doubly linked has: Each node has a pointer to the next and another point to the previous node. Allows is to be traverse 
+forward and backward. 
+
+Real world application: Music player list(this can be a circular linked list where the head and tail can be linked ) 
+Array: Direct access : Each element in an array is located next to each other. You can easily jump to any position 
+Linked List: Squential Access: Each element remembers part of a specific order. Unlike arrays, the elements can be stored anywhere.
+to get to an element you have to go through all elements required. because it's elements can be stored anywhere adding and removing 
+can be its advantage. 
+
+*/
+
+class LinkedList {
+ constructor(){
+ this.tail = this.head = null; 
+  this.length = 0; 
+ }
+ push(value) {
+  
+ }
+ 
+ pop(value) {
+  
+ }
+ _find(value, test=this.test){
+  
+ }
+ test(a,b){
+ return a === b; 
+ }
+ testIndex(search, __, i){
+return search === i; 
+ }
+ get(index) {
+ }
+ delete(index) {
+ }
+ 
+}
+  
+  
+  
+
+class Node {
+ constructor(value) {
+  this.value = value; 
+  this.next = null; 
+}
+}
