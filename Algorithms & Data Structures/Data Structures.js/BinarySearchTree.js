@@ -35,11 +35,19 @@ this.root = null;
  toObject(){
 return this.root; 
  }
+ 
+ 
+ 
+ 
 add(value) {
 if(this.root = null){
+ 
+ // if there is no head, create  a new head
 this.root = new Node(value);
  return; 
 }
+ 
+ 
  let current = this.root; 
  while(true){
 if(current.value > value ) {
