@@ -48,6 +48,13 @@ right heavy: child is right heavy.
 
 left node are nodes who have no children
 
+
+single rotation 
+             8  node A
+            /  \ 
+ node C  5       9 node B 
+       
+
 */
 
 
