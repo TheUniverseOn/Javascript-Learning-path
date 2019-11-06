@@ -45,6 +45,9 @@ right heavy: child is right heavy.
 ->UPDATe the heights of all the nodes involved 
 
 
+
+left node are nodes who have no children
+
 */
 
 
