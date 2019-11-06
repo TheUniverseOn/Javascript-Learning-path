@@ -10,6 +10,9 @@ up your recursive calls you check to see if the node is balanced after you
 added the new node. A tree is out of balance if its subtrees' difference of heights 
 is greater than one.
 
+The benefit of all this extra effort is we can now guarntee that we won't hit 
+those bad or worse case scenerios of having greatly out of balance trees
+and guarantee we won't hit the O(n) cases. our worst cases becomes O(log n)
 
 
-*/ 
+*/
