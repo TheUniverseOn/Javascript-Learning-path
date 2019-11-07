@@ -90,3 +90,47 @@ class Node {
   this.next = null; 
 }
 }
+
+
+
+
+
+// skelton 
+
+function LinkedList(){
+
+
+let Node = function(element) {
+this.element = null; 
+ this.next = null;
+
+}
+let head = null;
+ let length = 0;
+ 
+ 
+ this.append = function(element) {
+
+  
+  let node = new Node(element){
+current; 
+   
+   if(head === null),
+   head = node;
+
+} else {
+ current = head; 
+ 
+ 
+ while(currrent= next) {
+current = current.next; 
+
+}
+ 
+ current.next = node;
+}
+length++; 
+}
+}
+
+
