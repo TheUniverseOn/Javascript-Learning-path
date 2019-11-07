@@ -133,4 +133,7 @@ length++;
 }
 }
 
-
+// using the data structure 
+let list = new LinkedList();
+list.append(8);
+list.append(18);
