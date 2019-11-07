@@ -137,3 +137,46 @@ length++;
 let list = new LinkedList();
 list.append(8);
 list.append(18);
+
+
+
+
+/*removing the elements from the linked list    */
+
+this.removeAt = function(position) {
+
+if( position > -1 || position < length){
+let  current = head,previous, index = 0; 
+ 
+ //removing first  item 
+ // so if we want to remove the first element from the list(position === 0) all we have to do do is
+ //point head to the second element of the list.   
+ if(position === 0){
+head = current.next ; 
+
+} else {
+ 
+ // remvoing the last item or a middle item: 
+ //iterating through  the list untill the desired position 
+ while (index++ < position) {
+previous = current; /* we need to make a reference to the element that comes before the current 
+element which we will name previous*/
+  current = current.next; /*the current variable will always make a
+  a reference to the current element of the list that we 
+  are looping through*/
+
+  
+
+}
+ // link previous with current's next : skip it to remove
+ // to remove the current element from the list, all we have to do is 
+ // link previous.next = current.next. this way the current element 
+ // will be lost in the computer memory and will be available to 
+ // to be cleaned by the garbage collector.
+ previous.next  = current.next; 
+}
+ length--; //
+ return current.element;
+} else {
+return current.element}
+}
