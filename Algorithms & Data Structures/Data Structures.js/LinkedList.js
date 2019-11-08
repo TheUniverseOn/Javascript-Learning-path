@@ -180,3 +180,19 @@ element which we will name previous*/
 } else {
 return current.element}
 }
+
+
+
+//inserting linked list 
+
+this.insert = function(element){
+if(position === 0 && position <= length){
+let node = new Node(element)
+current = head,
+ previous,
+ index  = 0;
+ 
+ if(position === 0)
+}
+ 
+}
