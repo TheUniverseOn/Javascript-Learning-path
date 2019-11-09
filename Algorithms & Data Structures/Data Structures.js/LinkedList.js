@@ -225,3 +225,35 @@ let node = head, previous, current;
  
  //when we exit the list temp is null, which means the lastt  nide visted 
  //previous was the tail of the original list. Therefore it is the head  of our new reversedmlist.
+ 
+ 
+ 
+ 
+ 
+ 
+ /*doubly linked list
+ 
+ The difference between a doubly linked list and a singly linked list 
+ is that in a sinkly linked list, we make the link from one node to
+ the next only, while in the doubly linkwd list, wr have a double link: one for 
+ the next element and one for the previous element, ad shown in the followong  code*/
+ 
+ 
+ function DoublyLinkedList(){
+let node = functio(element){
+
+this.element = element;
+this. next = null;
+this.prev = null; 
+};
+  
+  
+  let length = 0; 
+  let head = null;
+  let tail = null; 
+  
+  
+  //methods go here
+
+} 
+ 
