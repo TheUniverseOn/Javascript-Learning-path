@@ -256,4 +256,14 @@ this.prev = null;
   //methods go here
 
 } 
- 
+ /* As we can see, the difference between the LinkedList(singly), and the DoublyLinkedList class are
+inside the Node class, we have a new attribute(new pointer) called prev and inside the DoublyLinkedList class, we also havr the 
+tail attibute to keep refernce of the last item of the list
+
+
+The doubly linked list provided us wit ways to iterate the list
+from the begining to its end or vice versa. we can also go to the next 
+ next element or the previous element of a partciular node. In the singly 
+ linked list, when you are iterating the list and you miss the desired element, you need to go 
+ back to the begining of the list and start iterating it again. this is one of the advantages 
+ of doubbly linked list*/
