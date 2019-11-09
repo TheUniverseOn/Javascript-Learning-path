@@ -196,3 +196,32 @@ current = head,
 }
  
 }
+
+ 
+ 
+ 
+ 
+ // reversing a linked list 
+ 
+ 
+ function reverse(head){
+let node = head, previous, current; 
+  
+  while(node) {
+// savve next before before we overwrite node.nex; 
+   
+   temp = node.next;
+   
+   //revverse pointer 
+   
+   node.next = previous;
+   
+   // step forward in the list  
+   previous = node; 
+   node = temp; 
+}
+  return previous 
+}
+ 
+ //when we exit the list temp is null, which means the lastt  nide visted 
+ //previous was the tail of the original list. Therefore it is the head  of our new reversedmlist.
