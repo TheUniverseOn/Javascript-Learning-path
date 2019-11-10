@@ -167,7 +167,7 @@ return this number.
 
 
 
-The values method 
+The values() method //This returns an array of all values of the set
 
 The same logic applies to the values method, using which we want to extract all the keys
 of the "items" object and returnbm its value as an array: 
