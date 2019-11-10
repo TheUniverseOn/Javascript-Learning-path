@@ -121,5 +121,10 @@ All we need to do to reset the items object is assign it to an empty
 object again (//3)^. We could also iterate the set and remove all the
 values one by one using the remove method, but this is too much 
 work as we have an easier way of doing it. 
+
+
+The size method 
+
+
 */
 
