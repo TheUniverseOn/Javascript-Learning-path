@@ -219,6 +219,26 @@ Set Operations
  
  Tge mathematic concept of union is the union of sets A and B, denoted by:
  
- A 
+ A ∪ B 
+ 
+ This set is defined as: 
+ A ∪ B = {x | x E A V x E B}
+
+
+
+That means that x(the element) exists in A or exists in B. 
+
+
+implenting the union method in our Set class via the following code 
+
+this.union = function(otherSet){
+let unionSet = new Set(): //1
+
+let values = this.values(); //2
+for(let i = 0; i < values.length; i++){
+unionSet.add(values[i]);
+}
+return unionSet;
+}
 */
 
