@@ -163,5 +163,48 @@ and check wether this property is really a property of
 our object(so that we do not count it more than once(//6)) . if positive, we will 
 increment the "count" variable (//7) and at the end of the method, we will 
 return this number. 
+
+
+
+
+The values method 
+
+The same logic applies to the values method, using which we want to extract all the keys
+of the "items" object and returnbm its value as an array: 
+
+this.valuesLegacy = function(){
+let values = [];
+for(let key in items) { //7
+if(let i=0, key = Object.keys(items); i<keys.length; i++) {  //8
+values.push(items[key];
+}
+}
+return values;
+}
+So, first we will through all the properties of the items(//7), add them
+to an array (//8), and return this array. The method is similar to the sizeLegacy method we developed
+, but instead of counting the properties,we are adding in an array. 
+
+
+Using the Set class 
+Now, that we have finished implementing our data structure, let's 
+take a look at how we can use it. Let's give it a try and execute some
+some commands to test our "Set" as follows: 
+
+ley set = new Set(); 
+
+set.add(1); 
+console.log(set.values()); // ["1"]
+console.log(set.has(1)); //true
+console.log(set.size));//1
+
+set.add(2);
+console.log(set.size()); //2
+
+set.remove(1); 
+console.log(set.values(1)); ["2"];
+
+set.remove(2);
+console.log(set.values()); []; 
 */
 
