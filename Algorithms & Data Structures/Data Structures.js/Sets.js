@@ -206,5 +206,19 @@ console.log(set.values(1)); ["2"];
 
 set.remove(2);
 console.log(set.values()); []; 
+
+we coild have used an array instead of an object to store the 
+elements. 
+
+Set Operations
+ 
+ We can perform the following operations on sets: 
+ 
+ Union: Given two sets, this returns a new set with elements from both the given sets
+ 
+ 
+ Tge mathematic concept of union is the union of sets A and B, denoted by:
+ 
+ A 
 */
 
