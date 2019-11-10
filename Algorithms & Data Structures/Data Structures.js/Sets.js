@@ -240,5 +240,32 @@ unionSet.add(values[i]);
 }
 return unionSet;
 }
+
+First, we need to create a new set to represent the union of sets(//1)
+.Next, we will get all the values from first set(the current instance of the 
+"Set" class). iterate through them, and add all the values to set that represents the union (//2). Then, we will
+do the exact same thing but with the second set(//3). At last, we will return 
+the result
+
+Let's test the previous code as follows: 
+
+let setA = new Set(); 
+setA.add(1);
+setA.add(2);
+setA.add(3);
+
+let setB = new Set();
+setB.add(3);
+setB.add(4);
+setB.add(5);
+setB.add(6);
+
+let unionAb = setA.union(setB);
+console.log(unionA.values());
+
+//The output will be ["1","2","3","4","5","6",]
+The element is 3 present in Both A and B, and it sppears only once
+in the result set.
+
 */
 
