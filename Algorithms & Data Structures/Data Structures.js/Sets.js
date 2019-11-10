@@ -124,7 +124,44 @@ work as we have an easier way of doing it.
 
 
 The size method 
+The size method returns how many items are in the set. There are three 
+ways if implementing the method. 
+
+The first method is to use a length variable and control whenever
+we use the add or remove method. 
+
+In the second Method, we use a built-in function from the built-in Object class in 
+JS as follows: 
+
+this.size = function(value) {
+return Object.keys(items).length; //4
+
+}
+The Object class in JS has a method called keys that returns an array of all
+properties of a given object. In this case, we can use the length property 
+of the array(//4^) to return how many properties we have in the "items" 
+object. This code will only in modern browsers
 
 
+The third method is to extract each property of the "items" object
+manually,count how many properties there are, and return the the number.
+This method will work in any browser and id the equivalent of the previous code.
+
+this.sizeLegacy = function(){
+let count = 0; 
+for(let key in items) { //5
+if(items.hasOwnProperty(key)) //6 this asks whether this property is really a property of our object(so we dont count it more than obce) 
+++count; //7
+
+}
+return count;
+
+};
+
+So,first we will iterate through all the properties of the "items" object(//5)
+and check wether this property is really a property of 
+our object(so that we do not count it more than once(//6)) . if positive, we will 
+increment the "count" variable (//7) and at the end of the method, we will 
+return this number. 
 */
 
