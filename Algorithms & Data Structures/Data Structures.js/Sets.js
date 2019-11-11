@@ -266,6 +266,41 @@ console.log(unionA.values());
 //The output will be ["1","2","3","4","5","6",]
 The element is 3 present in Both A and B, and it sppears only once
 in the result set.
+ 
+ 
+ Set intersection 
+ 
+ The mathemtic concept of intersection,here the intersection of sets A and B, is denoted by. 
+ 
+ A  B
+ 
+ A B = {x | x E A A x E B }
+ 
+ 
+ This means that x(the element) exists in A, and x exists in B. The following 
+ diagram exemplifies the intersection operation. 
+ 
+ 
+ 
+ implementing te intersection method in our Set class. 
+ 
+ this.intersection = function(otherSet){
+let intersectionSet = new Set();
 
+let values = this.values(); 
+for(let i= 0; i<values.length; i++){  //2
+if(otherSet.has(values[i])){ //3
+intersectionSet.add(values[i]); //4
+}
+} 
+return intersectionSet;
+}
+ 
+ Subset 
+ The last set operation we will cover is the subset. An example of the mathemtic
+ concept of subset is that A is a subset of(or is included in), and this is denoted by: 
+ 
+ A C B
+ 
 */
 
