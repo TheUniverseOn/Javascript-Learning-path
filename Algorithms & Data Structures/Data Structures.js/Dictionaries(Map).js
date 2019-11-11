@@ -91,3 +91,24 @@ The get method will first verify that the value that we would
 like to retrieve exists (by searching for key) , and if that 
 result is positive, its value is returned. if not, an undefined
 value is returned(remember that undefined is different from null);
+
+
+
+The next method is the values method. This method will be used retrieve an array 
+of all values instances present in the dictionary: 
+
+this.values = function(){
+var values = [];
+ for(var k in items){  //1
+  if(this.has(k)){
+values.push(items[k]); //2
+
+}
+return values; 
+}
+}
+
+First, we iterate through all the attributes from the items object(//1) 
+ Just to make sure it exists,  we will use the has function to verify the 
+ key really exists, and then we will add its value to the values array(//2). At the 
+ end, we simply return all the values found; 
