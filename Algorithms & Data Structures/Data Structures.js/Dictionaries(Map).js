@@ -112,3 +112,6 @@ First, we iterate through all the attributes from the items object(//1)
  Just to make sure it exists,  we will use the has function to verify the 
  key really exists, and then we will add its value to the values array(//2). At the 
  end, we simply return all the values found; 
+ 
+ 
+ 
