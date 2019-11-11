@@ -114,4 +114,65 @@ First, we iterate through all the attributes from the items object(//1)
  end, we simply return all the values found; 
  
  
+ The clear,size, keys, and getItems methods
+ Tge clear and size methods are exactly the same as those from 
+ Set class. 
  
+ The keys method returns all the keys used to identify a value 
+ in the Dictionary class. To retrieve all the kets from a JS object, we can 
+ use the "keys" method from Object class by passsing our Object as a parameter: 
+ 
+ 
+ this.keys = function(){
+return Object.keys(items)
+}
+ FYI, we can verify the output of the items property, let's 
+implement a methid called getItems that will return the "items" variable 
+like this : 
+
+this.getItems = function(){
+return items;
+
+}
+
+Using the Dictionary class
+ first of all, we will create an instance of Dictionary class, and then
+ we will add three e-mails to it. We will use the Dictionary
+ instance to exemplify an e-mail address book.  
+ 
+ Let's execute some codenising the class we created: 
+
+var dictionary: new Dictionary(); 
+dictionary.set("pixelspony", "hello@pixelspony.com");
+
+if we execute this code: we will get true
+
+console.log(dictionary.has("hello"))//true
+
+The following code will output 1 because wr have added only 1
+element
+console.log(dictionary.size()): //1
+
+console.log(dictionary.values()) ; // ["hello@pixelspony.com"]
+console.log(dictionary.keys()) ; // ["pixelspony"]
+console.log(dictionary.get("pixelspony")) ; // ["hello@pixelspony.com"]
+
+
+The hash table 
+HashTable aka HashMap, a hash implementation of the Dictionary class
+ 
+ 
+ Hashing consists of finding a value in a data structure in the
+the shortest time possible. In the above get method snippet, we
+need to iterate through the structure until we find it. When we use 
+the hash function, wr already know which position the value is in, so
+wr can simply retirve it. A hash function is a function that, given a 
+key, will return an address in the table where the value is.
+
+
+
+
+
+
+
+
