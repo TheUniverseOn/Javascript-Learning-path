@@ -172,7 +172,36 @@ key, will return an address in the table where the value is.
 
 
 
+Creating a hash table 
+
+We will use an array to represent our dara structure to have 
+one very similar to that which we used in the diagram in the 
+previous topic. 
+
+As usual let's start with the skelton of our class via the following code:
+
+function HashTable(){
+var table = []; 
+}
 
 
+Next, we need to add some methods to our class. We will implement 
+three basic class: 
+
+put(key,value): This adds new item to the hash table or update it
+remove(key): This removes the value frkm the hash table using the key
+get(key): This returns a specific balue searched by the key. 
 
 
+The first method that we will implement before we implement before
+these three methods are the "hash" function. This is a private method of the 
+HashTable class: 
+
+var loseloseHashCode = function() {
+var hash = 0;
+ for (var i = 0; i<key.length; i++){
+hash += key.charCodeAt(i)
+}
+ 
+ return hash % 37;
+}
