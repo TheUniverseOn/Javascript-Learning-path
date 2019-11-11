@@ -39,3 +39,55 @@ similar to the length property of the array.
 
 keys(): This returns an array of all the keys the dictionary contains.
 values(): This returns an array of all the values of the dictionary. 
+
+
+The has and Set methods 
+
+has(key) method. we will implement this method because it will
+be used in other methods, such as set and remove. The implementation is as follows: 
+
+this.has = function(key) {
+return key in items; 
+}; 
+
+The implementation is is exactly the same as what we did for 
+ the Set class . we are using the JS in operator to verify is a
+ property of the "items " object. 
+ 
+ 
+ 
+ The next method is the set method: 
+
+this.set = function (key, value){
+items[key] = value //1
+}
+
+This receives a key and value parameter. We simply set the value 
+to key property of the "items"  object. This method can be used 
+to add new value or update an existing one. 
+
+
+The delete method 
+it's very similar to the delete method fron the Set class; The only
+difference is that we will first search for key(instead of value) : 
+
+this. this.delete = function(key){
+if(this.has(key)){
+delete items[key];
+ return true; 
+}
+return false; 
+}
+
+The get and values methods
+If we want to search for a particular item from the dictionary and 
+retrieve its value, we can use the following method: 
+
+this.get = function(key) {
+return this.has(key) ? items[key] : undefined;
+}
+
+The get method will first verify that the value that we would 
+like to retrieve exists (by searching for key) , and if that 
+result is positive, its value is returned. if not, an undefined
+value is returned(remember that undefined is different from null);
