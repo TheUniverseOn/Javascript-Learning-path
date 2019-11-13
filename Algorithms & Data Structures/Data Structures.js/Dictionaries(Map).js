@@ -174,7 +174,69 @@ key, will return an address in the table where the value is.
 
 Creating a hash table 
 
-We will use an array to represent our dara structure to have 
+Hash tables are extremely powerful tools jn modeyn CS and  are used extensively
+in things like programming languages' underpinnings, databases, caches, etc. They 
+do have some tradeoffs, namely potentially memory footprints and the need
+for complicared hashing but they have constant time O(1) lookuos, deketes, and
+and adds if youbare doing a set or map. 
+
+The gist of a hash table is you send your key through a hashing 
+function like MD5, SHA1, or obe of your invention, which converts
+the to an addressable spaxe(some sort of index)Since in JS we 
+don't actually manage memory on that low of level, we're going to approximate
+the way it would work with karge empty array.However keep in mind 
+that if this was a languagevwhere we managed our own memory we'd be 
+doung that instead.
+This is powerful for maps because now our key points to exactly
+where our objectvis being here
+you need a kargr footprint of memory to be able to store 
+of all your objects without collisions. This can balloon quickly. 
+  
+you also need a good hashing algorithm that spots out a viable address
+for table. That algorithms needs to havev several qualities to it. 
+it meeds to be idempotent. idempotent is a fancy way of saying that 
+a function given an input always outputs the same output.
+functikn double(x) {returns 2x;} would be an idempotent function
+because if I do DMdoubke(5) a million times, on the millikn and first
+try i will get the answer 10. The function double idempotent.
+take the following function. 
+
+var muliplier = 0;
+function doublePlus(x){
+ multiplier++;
+ return 2x * multiplier
+
+} 
+the above function is not idempotent because if i call
+i keep calling the doublePlus function with 5,   i am going to keep 
+getting different answers. It us not idempotentb because the functikn has side effects.
+Side effectsvare when you are calling a function majes some effect to the
+state surrounding it. You generally want to avoid sude effects
+un programming as much as poossible becausevit it najes debugging 
+nuch harder, also makes the code testable becausevit means your
+code must be in a certain state to work a certain way, and makes 
+the code harderto read becayse you have to think about functuons
+ocer term instead of a in a vacuum  because  depend on the
+code around them. Indempotence is critical in a good hashing function
+because given a certain input always has to address the same place 
+in memory else the whole idea of a hash table falls apart.
+
+a good hashing algorithm needs to have a pretty good distribution
+of values. If it doesnt have good distribution values you are
+going to end with collisions. Collisions happen when two inputs
+end up with the same output, which means they are going to end up
+in the same memory. That's a problem, an example of poor hashing 
+ algorithm would be substituting 1 for a, 2 for b , 3 for c, wtc. For
+  a string 'az' (1+26) and 'by' 2+25 are going to collide, as would 
+   'za' . You need them to have a wide and as even as possible distribution. 
+
+   A good hashing algorithm needs to be performant too; the point 
+   of a hash table to have a lightning fast lookups and writes; if you
+   are hashing an alogorithm that us mega slow them you are defeating 
+   tge purpose
+   
+   
+We will use an array to rep resent our dara structure to have 
 one very similar to that which we used in the diagram in the 
 previous topic. 
 
