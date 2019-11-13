@@ -203,7 +203,7 @@ var hash = 0;
 hash += key.charCodeAt(i)
 }
  
- return hash % 37;
+ return hash % max;//return the max table
 }
 
 
@@ -251,5 +251,8 @@ The last method we will implement is the remove method,which is as
 follows: 
 
 this.remove = function(key) {
-table[loseloseHashCode (key)] = undefined; 
+table[loseloseHashCode ((key)] = undefined; 
 } 
+
+
+
