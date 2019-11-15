@@ -65,3 +65,10 @@ follows:
 this.remove = function(key) {
 table[loseloseHashCode ((key)] = undefined; 
 } 
+                        
+                        
+                 hsndling collisions 
+        1. Separate chaining 
+         2. Linear probing               
+                        
+                        
