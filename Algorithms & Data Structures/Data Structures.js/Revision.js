@@ -25,8 +25,38 @@ and add the ASCII value of the corresponding */
 now we have our "hash" function, we can implement the put method, as follows
 
 
-this.put = function(key, value){
-var position = hashAlgo(key)
-table[position] = value;
+this.put = function(key) {
 
+var position = hashAlgo(key);
+       table [position]=  value 
+}
+
+
+//retrieving value from the hashtable
+
+this.get = function(key) {
+table[hashAlgo(key)]
+}
+
+
+
+this.remove = function(key){
+table[hashAlgo(key)]= undefined;
+}
+
+
+//using the HashTable class
+
+var hash = new HashTable(); 
+hash.put("sophonias", "software Engineer')
+   hash.put("sophonias", "software Engineer')      
+             
+         //separate chaining 
+ var ValuePair = function(key, value) {
+this.key = key;
+ this.value = value;
+ 
+ this.toString = function() {
+return '[' + this.key + ' - ' + this.value + ']'
+ }
 }
