@@ -72,3 +72,7 @@ table[loseloseHashCode ((key)] = undefined;
          2. Linear probing               
                         
                         
+                        1. separate chaining consists of creating linked list for each position
+                        of the table and storing the elements in it. it's the simplest technique to 
+                        handle collision. it requires additional mdmory outside the hashTable instance. 
+                        
