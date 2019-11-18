@@ -30,7 +30,41 @@ incremented when we push new elements onto the stack and is decremeneted when we
 While pushing, and popping, and peekings are the primary operations associated with a stack, there are other operations we need 
 to perform and properties, we need to perform and p-rop-erties we need to examine. The clear op-eration removes all the elements from
 a stack. The length p-rop-erty holds the number of elements contained in a stack. We also define an empty property to let us know 
-if a stack has no elements in it, though  we can use the length property for this as well. */
+if a stack has no elements in it, though  we can use the length property for this as well. 
+
+The stack implementation 
+To build a stack, we first need to decide on the underlying data structure we will use to store the stack elements. We will use an 
+arrray in our implementation 
+
+We begin our stack implementation by defining the constructor function for a stack class: 
+
+
+*/
+
+function Stack(){
+    this.dataStore = []; 
+    this.top = 0; 
+    this.push = push; 
+    this.pop = pop; 
+    this.peek = peek; 
+}
+/*The array stores the stack elements is named dataStore. The constructor sets it to an empty array. The top variable keeps
+track of the top- of the stack and is initially set to 0 by the constructor indicating that the 0 p-osition of the array is the 
+top- of the stack, at least until an element is p-ushed onto the stack. 
+
+The first function to implement is the push() function. When we push a new element onto a stack, we have to store it in the top position 
+and increment the top variable so that the new top is the next empty  position in the array. Here is the code*/
+
+function push(element) {
+    this.dataStore[this.top++] = element; 
+}
+
+
+/* Placing the increment op-erator after the call to this.top ensures that the current value of of the top is used to p-lace the 
+new element at the top- of the stack before top- is incremented. */
+
+
+
 
 
 //FIFO : first in first out
