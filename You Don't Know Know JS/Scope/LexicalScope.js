@@ -48,3 +48,16 @@ it
 1. avoid naming collision
 2.Hiding something means: people can misuse it 
 3. you also protect yourself from future refactoring */
+
+
+
+
+//We can use IIFE to immediately invoke it. The below code anonymous; 
+
+var teacher = 'Kyle Simpson'; 
+
+(function anotherTeacher(){
+    var teacher = "Brian Holt"; 
+    console.log(teacher); //Brian Holt
+})(); 
+console.log(teacher)//Kyle Simpson 
