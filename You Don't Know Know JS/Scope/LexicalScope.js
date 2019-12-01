@@ -1,15 +1,15 @@
-// var student = "sophonias"; 
+ var student = "sophonias"; 
 
-// function otherClass(){
-// var student = "me"; 
+ function otherClass(){
+ var student = "me"; 
 
-// function ask(question){
-// console.log(student, question); //me why?
-// }
+function ask(question){
+  console.log(student, question); //me why?
+ }
 
-// ask("why?"); 
-// }
-//  otherClass();
+ ask("why?"); 
+ }
+ otherClass();
 /** Lexical scope: console.log(student) is decided at compile time */
 
 
