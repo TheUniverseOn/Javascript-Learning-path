@@ -64,7 +64,7 @@ console.log(teacher)//Kyle Simpson
 
 
 
-
+//Block scoping 
 //or we can use let instead of IIFE
 var teacher = 'Kyle Simpson'; 
 
