@@ -61,3 +61,16 @@ var teacher = 'Kyle Simpson';
     console.log(teacher); //Brian Holt
 })(); 
 console.log(teacher)//Kyle Simpson 
+
+
+
+
+//or we can use let instead of IIFE
+var teacher = 'Kyle Simpson'; 
+
+{
+    let teacher = 'Brian Holt'; 
+    console.log(teacher)//Brian Holt
+}
+
+console.log(teacher)//Kyle Simpson 
