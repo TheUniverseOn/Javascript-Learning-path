@@ -132,4 +132,16 @@ var g = flip(f);
 g(1,2,3,4); //[1,2,3,4]
 
 
+function reverseArgs(fn) {
+return function reverse(arg1,arg2, ....args){
+return fn(...args.reverse);
+}
+                         }
+
+function f(...args){
+return args;
+}
+
+var g = reverseArgs(f);
+g(1,2,3,4); //[4,3,2,1]
 
