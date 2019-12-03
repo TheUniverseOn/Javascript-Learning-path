@@ -107,3 +107,29 @@ CPU Time Delay*/
         const score = watchList.map(item => ({ title: item['Title'], score: item['Metascore'], rating: item['imdbRating']}))
     console.log(score)//[ { title: 'Inception', score: '74', rating: '8.8' } ] 
 
+
+
+//unary function 
+//binary function 
+
+
+
+/** Flip & Reverse Adapter
+ flips arguments 
+*/
+
+function flip(fn) {
+return function flipped(arg1,arg2, ....args){
+return fn(arg2, arg1, ....args);
+}
+                         }
+
+function f(...args){
+return args;
+}
+
+var g = flip(f);
+g(1,2,3,4); //[1,2,3,4]
+
+
+
