@@ -160,3 +160,17 @@ return arr.sort(function(a, b){
 }
 alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 
+
+
+
+
+//combining an array into a string using the join and split method 
+
+ 
+    function sentensify(str) {
+  return str.split(/\W/).join(' ')
+
+    }
+   console.log( sentensify("May-the-force-be-with-you"));
+    
+
