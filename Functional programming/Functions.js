@@ -145,3 +145,18 @@ return args;
 var g = reverseArgs(f);
 g(1,2,3,4); //[4,3,2,1]
 
+
+
+
+//Sorting an array Alphabetically using the sort method 
+
+function alphabeticalOrder(arr) {
+ 
+return arr.sort(function(a, b){
+    return a ===b ? 0 : a > b ? 1 : -1; 
+}); 
+
+
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
