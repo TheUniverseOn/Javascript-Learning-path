@@ -174,3 +174,17 @@ alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
    console.log( sentensify("May-the-force-be-with-you"));
     
 
+
+
+
+//Every method; checking positive number 
+function checkPositive(arr) {
+
+return arr.every(function(curr) {
+  return curr >= 0; 
+});
+
+}
+checkPositive([1, 2, 3, -4, 5]);
+
+
