@@ -202,3 +202,24 @@ return function(y){
   
 }
 console.log(add(10)(20)(30));//60
+
+
+
+
+
+
+
+//splice and slice
+
+function frankenSplice(arr1, arr2, n) {
+ 
+var arr2copy = arr2.slice();
+for(var i = 0; i < arr1.length; i++){
+ arr2copy.splice(n, 0, arr1[i]);
+ n++;
+}
+return arr2copy;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);// [ 4, 1, 2, 3, 5, 6 ]
+
