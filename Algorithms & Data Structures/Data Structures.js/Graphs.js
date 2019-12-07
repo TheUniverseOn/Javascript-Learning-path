@@ -35,7 +35,7 @@ using a two-dimensional array, as array[i][j]=== 1 if there
 is an edge from the node with index i to the node with index j or 
 as array[i][j] === 0 otherwise. 
 
-Graphs thar are not strongly connected (sparse graphs)will be represented
+Graphs that are not strongly connected (sparse graphs)will be represented
 by a matrix with many zero entries in the Adjacrncy matrix. 
 This means we would waste a space in the computer memory to represent 
 edges that do not exist; i.e if we need to find the adjacent 
@@ -44,3 +44,40 @@ row even if this vertex has only one adjacent vertex. Another
 reason this might not be a good representation is that the number 
 of vertices in the graph may change, and a two dimensional array 
 is inflexible. 
+
+The adjacency list 
+We can use a dynamic structure to represent graphs as well, called 
+an adjacensy list. This consists of a list of adjacent vertices for every vertex of the 
+graph. There are a few different wats we can represent this 
+data structure. To represent the list of adjacent vertices, we can 
+use a list(array), a linked list, or even a hash map or dictionary. 
+The following diagram exemplifies the adjacency list data structure, 
+    
+    
+    The incidence matrix 
+    we can also rrepresent graph using an incidence matrix. In an 
+    incidence matrix, each row of the matrix represents a vertex, and 
+each column represents ab edge, 
+    
+    Creating the graph class
+      As usual we declare the skeleton of our class
+          function Graph() {
+          var vertices = []; // 1
+              var adjList = new Dictionary();   //2
+}
+    
+we will use an array to store the names of all vertices of the 
+graph(//1), and we will use a dictionary to store the adjacent list(//2) 
+    The dictionary will use the name of the vertex as a key abd the list 
+    of adjacent as a value. Both the vertices array and the adjList
+    dictionary are private attributes of our Graph class. 
+    
+    Next, we will implement two methods: one to add a new vertex to the 
+    graph(because when we instantiate the graph, it will create an empty 
+one)and another method to add edges between the vertices. Let's implement 
+the addVertex method first, as follows. 
+
+this.addVertex = function(v){
+vertices.push(v) ; //3
+    adjList.set(v, [];
+}
