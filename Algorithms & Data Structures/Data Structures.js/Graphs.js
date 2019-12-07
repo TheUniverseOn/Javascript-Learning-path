@@ -79,5 +79,32 @@ the addVertex method first, as follows.
 
 this.addVertex = function(v){
 vertices.push(v) ; //3
-    adjList.set(v, [];
+    adjList.set(v, []); // 4
+    
 }
+
+The  above method receives a vertex v as a paramater. We will 
+add this vrtex to the list of the veryices //3 adn we will
+initialize the adjacent list eith an empty array by setting the dictionary
+value of the vertex v key with an empty array//4
+
+Now, Let's implement the addEdge method via the following code 
+
+
+this.addEdge = function(v, w) {
+adjList.get(v).push(w) //5
+    adjList.get(v).push(v) //6
+};
+
+The above method receives two vertices as parameters. First, we will 
+add an edge from vertex v to vertex  w  //5  by adding w to the 
+adjacency list if v. If you want to implement a directed graph 
+line //5  is enough. As we are working with undirected graphs in most
+examples jn this chapter, we will also need to add am edge from 
+w to v //6
+
+//we are only adding new elements to the array as we have already 
+//initialised it jn line 4.
+
+                
+                
