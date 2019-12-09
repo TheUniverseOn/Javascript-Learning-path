@@ -1,7 +1,7 @@
 
 vertices connected by an edge = adjacent vertices 
     A
-   /  \
+    /  \
    B   C
    /     \
    E      G
