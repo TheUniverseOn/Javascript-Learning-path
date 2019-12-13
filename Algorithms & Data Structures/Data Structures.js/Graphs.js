@@ -107,4 +107,11 @@ w to v //6
 //initialised it jn line 4.
 
                 
+
+Graph traversals 
+There are two algorithms that can be used to traverse a graph
+1. Breadth-first search(BFS)
+2.Depth-first search (DFS)
+Traversing a graph can be used to find a specific vertex or a path between two 
+vertices, to check the graph is connected, tp check whether it contains cycles etc.
                 
