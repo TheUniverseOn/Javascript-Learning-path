@@ -23,3 +23,18 @@ this is
 
 this is not 
 The function. Though it is estbalished when the function is invoked, it is not the function. 
+
+
+
+//normal function invocation using Strict mode 
+//this will not be bound to the global object. 
+
+
+"use strict"
+var name = "global"; 
+
+var fun = function(){
+  var name = 'fun'; 
+  console.log(this); 
+  console.log(this.name); //Uncaught TypeError: Cannot read property 'name' of undefined
+}
