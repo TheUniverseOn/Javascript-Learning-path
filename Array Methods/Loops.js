@@ -104,3 +104,23 @@ suspectsList.push(createSuspectsObj(suspects[i]));
 _.each(suspects, function(name){
 suspectsList.push(CreteSuspectObjects(name)); 
 })
+
+
+
+
+var test = function(val) {
+ console.log(this);
+  console.log(val);
+  console.log(arguments);
+  console.log(arguments[i++]);
+}
+
+
+var sum = function(){
+  var sum = 0; 
+  for(var i  = 0; i < arguments.length; i++){
+  sum += arguments[i]; 
+}
+  
+  console.log(sum);
+}
