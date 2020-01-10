@@ -37,6 +37,7 @@ console.log(“ the answer to everything:”, answer);
 
 The now part runs automatically, as soon I execute the program. But setTimeout(...) also sets up an event(a time-out) to happen later, so the contents  inside of  the later() function will be executed at a later a time (1,000 ms from now) 
 Any time you wrap a portion of code into aa function and specify that it should be executed in response to an event such as timer, mouse click, Ajax response, etc. ) 
-  I am  are creating a later  part  of my code, and thus introducing asynchrony to your program. 
+  I am  are creating a later  part  of my code, and thus introducing asynchrony to my program. 
 
-
+Async console
+Async await is syntactic sugar.
