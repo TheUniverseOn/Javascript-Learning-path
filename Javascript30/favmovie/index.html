@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="keys">
+
+    <div data-key="73" class="key">
+        <kbd>Press I </kbd>
+        <span class="voice">Iron Man:  </span>
+</div>
+
+
+
+<div data-key="75" class="key">
+        <kbd>Press S</kbd>
+        <span class="voice">Star Wars "Yoda:"You must unlearn what you have learned."  </span>
+</div>
+
+
+
+
+<div data-key="76" class="key">
+    <kbd>Press L</kbd>
+    <span class="voice">Lords of the Rings  </span>
+</div>
+
+    ----
+</div>
+
+<!-- voice -->
+
+
+<audio data-key="73" src="voices/funvee.wav"></audio>
+<audio data-key="83" src="voices/learn.wav"></audio>
+<audio data-key="76" src="voices/work.wav"></audio>
+--------
+
+
+
+<script>
+
+function movieVoice(e){
+
+  const voice = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); 
+    if(!voice) return;
+    voice.currentTime = 0; 
+    voice.play(); 
+key.classList.add('playing')
+}
+
+
+function removeTransition(e){
+if(e.propertyName !== 'transition') return; 
+this.classList.remove("playing"); 
+}
+
+const keys = document.querySelectorAll(".key"); 
+keys.forEach(key => key.addEventListener('transitionend', removeTransition ) ) 
+window.addEventListener('keydown',movieVoice );
+</script>
+
+
+</body>
+</html>
