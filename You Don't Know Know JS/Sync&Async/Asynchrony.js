@@ -20,7 +20,6 @@ setTimeout(later, 1000);
 There are two parts to this program. The first part that will run now and the second part that will run later. More explicitly put. 
 
 Now : 
-
 function now(){
 return 21; 
 }
