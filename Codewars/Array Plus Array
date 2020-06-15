@@ -1,0 +1,12 @@
+function arrayPlusArray(arr1, arr2) {
+
+return  [...arr1,...arr2].reduce((total, accu) => total + accu, 0)
+}
+
+
+Test.describe("Basic tests",function(){
+  Test.assertEquals(arrayPlusArray([1, 2, 3], [4, 5, 6]), 21);
+  Test.assertEquals(arrayPlusArray([-1, -2, -3], [-4, -5, -6]), -21);
+  Test.assertEquals(arrayPlusArray([0, 0, 0], [4, 5, 6]), 15);
+  Test.assertEquals(arrayPlusArray([100, 200, 300], [400, 500, 600]), 2100);
+})
