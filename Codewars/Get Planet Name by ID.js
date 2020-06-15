@@ -38,6 +38,14 @@ return name
 
 }
 
+
+
+//simpler  alternative 
+
+const getPlanetName(id) => (['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'])[id-1]; 
+
+
+//tests
 Test.assertEquals(getPlanetName(2), 'Venus');
 Test.assertEquals(getPlanetName(5), 'Jupiter');
 Test.assertEquals(getPlanetName(3), 'Earth');
