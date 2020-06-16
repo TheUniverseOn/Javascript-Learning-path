@@ -16,7 +16,7 @@ Note: for this kata y isn't considered a vowel.
 //SOLUTION 
 const disemvowel = (str)=> {
 
-return str.replace(/[aoeiuAOEIU]/g,'')
+return str.replace(/[aoeiu]/gi,'')
 
 }
 
