@@ -16,7 +16,7 @@ rowSumOddNumbers(2); // 3 + 5 = 8
 ``` My Solution 
 
 function rowSumOddNumbers(n) {
-   console.log( n * n * n  )
+    return n * n * n  
 }
 ```
 
