@@ -4,18 +4,22 @@ Return the average of the given array rounded down to its nearest integer.
 
 The array will never be empty.
 
-
+```
 
 function getAverage(marks){
   //TODO : calculate the downwar rounded average of the marks array
   let len = marks.length
-
-
 let reduced =  marks.reduce((accu, curr)=> accu + curr, 0)
 let mean = reduced / len
 return Math.floor(mean)
 }
 
+```
+```
+#### Refactored
+const getAverage = (marks)=>  Math.floor(marks.reduce((accu, curr)=> accu+curr) / marks.length)
+
+```
 
 Test.assertEquals(getAverage([2,2,2,2]),2);
 Test.assertEquals(getAverage([1,2,3,4,5,]),3);
