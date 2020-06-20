@@ -15,8 +15,9 @@ return Math.floor(mean)
 }
 
 ```
-```
+
 #### Refactored
+```
 const getAverage = (marks)=>  Math.floor(marks.reduce((accu, curr)=> accu+curr) / marks.length)
 
 ```
