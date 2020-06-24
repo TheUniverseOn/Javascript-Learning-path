@@ -19,10 +19,11 @@ flower2 % 2 === 0 && flower1 % 2 === 0 ? false : flower1 % 2 !== 0 && flower2 % 
 
 ### another solution 
 
-
+```
 function lovefunc(flower1, flower2){
   return flower1 % 2 !== flower2 % 2;
 }
+```
 
 Test.assertEquals(lovefunc(1,4), true)
 Test.assertEquals(lovefunc(2,2), false)
