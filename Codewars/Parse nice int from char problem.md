@@ -12,6 +12,15 @@ return +inputString.split(' ').filter(i=> parseInt(i)== i).join(' ')
 }
 ```
 
+###another simpler solution 
+```
+function getAge(inputString){
+  return parseInt(inputString);
+}
+```
+
 Test.describe("Basic tests",_=>{
 Test.assertEquals(getAge("4 years old"), 4);
 })
+
+
