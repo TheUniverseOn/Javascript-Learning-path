@@ -19,9 +19,9 @@ var mapObj = {
 1: 'I', 
 
 }
-return string.replace(/S, O, I|5, 0, 1/gi, function(matched){
+return string.replace(/S, O, I|5| 0| 1/gi, function(matched){
 return mapObj[matched]
-}
+})
 
 }
 ```
