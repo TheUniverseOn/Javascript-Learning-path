@@ -4,7 +4,7 @@ Input :: 1
 
 Output :: "One".
 
-
+```
 function switchItUp(number){
 //Write your own Code!
 var mapObj = {
@@ -20,8 +20,14 @@ var mapObj = {
 9: 'Nine',
 
 }
+```
+### Another soltion 
+```
+function switchItUp(n){
+  return ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n]
+}
 
-
+```
 return number.toString().replace(/Zero,One,Two,Three,Four,Five,Six,Seven,Eight,Nine|0|1|2|3|4|5|6|7|8|9/gi, function(matched){
 return mapObj[matched]
 })
