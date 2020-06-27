@@ -12,6 +12,11 @@ function removeEveryOther(arr){
 }
 ```
 
+### another solution 
+function removeEveryOther(arr){
+return arr.filter((num, index)=> index % 2 ===0
+}
+
 Test.describe("Basic tests",_=>{
 Test.assertSimilar(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']),['Hello', 'Hello Again']);
 Test.assertSimilar(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),[1, 3, 5, 7, 9]);
