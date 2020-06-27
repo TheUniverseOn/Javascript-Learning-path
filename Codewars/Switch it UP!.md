@@ -3,7 +3,7 @@ When provided with a number between 0-9, return it in words.
 Input :: 1
 
 Output :: "One".
-
+### My solution 
 ```
 function switchItUp(number){
 //Write your own Code!
@@ -20,6 +20,10 @@ var mapObj = {
 9: 'Nine',
 
 }
+return number.toString().replace(/Zero,One,Two,Three,Four,Five,Six,Seven,Eight,Nine|0|1|2|3|4|5|6|7|8|9/gi, function(matched){
+return mapObj[matched]
+})
+}
 ```
 ### Another soltion 
 ```
@@ -28,10 +32,7 @@ function switchItUp(n){
 }
 
 ```
-return number.toString().replace(/Zero,One,Two,Three,Four,Five,Six,Seven,Eight,Nine|0|1|2|3|4|5|6|7|8|9/gi, function(matched){
-return mapObj[matched]
-})
-}
+### Tests
 
 
 Test.assertEquals(switchItUp(1),"One");
