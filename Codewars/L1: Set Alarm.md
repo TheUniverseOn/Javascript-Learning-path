@@ -9,14 +9,19 @@ setalarm(false, true) -> false
 setalarm(false, false) -> false
 setalarm(true, false) -> true
 
-
+### My solutiin 
 ```
 function setAlarm(employed, vacation){
 return employed === true && vacation === true ? false : employed === false && vacation === true ? false : employed === true && vacation === false ? true : false
 }
 
 ```
-
+### simpler solution
+ const setAlarm = (employed, vacation) => employed && !vaction
+ 
+ 
+ ### simpler solution
+ const setAlarm = (employed, vacation) => employed > vacation
 ### Tests
 
 
