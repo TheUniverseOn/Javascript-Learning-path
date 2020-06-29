@@ -21,6 +21,14 @@ this.ballType = ballType
 }
 ```
 
+```
+
+ class Ball{
+  constructor(ballType = 'regular'){
+ 
+ this.ballType = ballType
+ }
+```
 ### Tests
 // Create your own tests here. These are some of the methods available:
 //  Test.expect(boolean, [optional] message) 
