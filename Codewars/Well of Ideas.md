@@ -20,7 +20,7 @@ return  wordLen >2 ? 'I smell a series!'  : wordLen > 0 ? 'Publish!' : 'Fail!'
 
 ```
 
-
+```
 ### another Solution 
 
 function well(x){
@@ -29,3 +29,4 @@ return count ? count > 2 ? 'I smell a series!' : 'Publish!'  : 'Fail!'
 
 }
 
+```
