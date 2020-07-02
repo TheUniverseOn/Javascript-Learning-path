@@ -22,6 +22,11 @@ function isDivisible(wallLength, pixelSize){
 }
 ```
 
+function isDivisible(wallLength, pixelSize){
+ return Number.isInteger(wallLength/ pixelSize)
+}
+
+
 Test.describe("Basic tests",_=>{
 Test.assertEquals(isDivisible(4050, 27), true);
 Test.assertEquals(isDivisible(4066, 27), false);
