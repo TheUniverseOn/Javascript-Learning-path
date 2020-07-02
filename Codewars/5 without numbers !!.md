@@ -12,6 +12,14 @@ function unusualFive() {
 
 ```
 
+### clever hack 
+```
+function  unusualFive() {
+return Math.hypot(Math.ceil(Math.E), Math.ceil(Math.PI)); 
+
+}
+```
+
 describe("unusualFive", function(){
   it("should return 5", function(){
     assert.strictEqual(unusualFive(), 5);
