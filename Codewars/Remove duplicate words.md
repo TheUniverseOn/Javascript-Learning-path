@@ -20,7 +20,10 @@ function removeDuplicateWords (s) {
   // your perfect code...
   let splitted =  s.split(' ')
   return [...new Set(splitted)].join(' ')
+  
 }
+
+### Set object lets you store unique values of any type. In other words, Set will automatically remove duplicates for us 
 ```
 ### My other solution 
 
