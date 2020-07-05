@@ -23,8 +23,12 @@ function tripleTrouble(one, two, three){
     [acc, one[i], two[i], three[i]].join(''), '')
     
      ```
-    
-    
+     
+        ```  
+    function tripleTrouble(one, two, three){
+  return one.split('').map((l, p)=>one[p]+two[p]+three[p]).join('')
+ }
+         ```
  Test.assertEquals(tripleTrouble("this","test","lock"), "ttlheoiscstk");
 Test.assertEquals(tripleTrouble("aa","bb","cc"), "abcabc");
 Test.assertEquals(tripleTrouble("Bm", "aa", "tn"), "Batman");
