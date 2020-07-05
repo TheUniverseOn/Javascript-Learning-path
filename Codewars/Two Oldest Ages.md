@@ -14,6 +14,13 @@ return ages.sort((a, b)=> a-b).slice(-2)
 }
 ```
 
+```
+function twoOldestAges(ages){
+let first = ages.sort((a, b)=> b-a)
+return [first[1],first[0]]
+}
+```
+
 // TODO: Add your tests here
 // Starting from Node 10.x, [Mocha](https://mochajs.org) is used instead of our custom test framework.
 // [Codewars' assertion methods](https://github.com/Codewars/codewars.com/wiki/Codewars-JavaScript-Test-Framework)
