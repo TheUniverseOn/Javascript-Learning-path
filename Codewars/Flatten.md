@@ -10,9 +10,10 @@ flatten([[[1,2,3]]]) // => [[1,2,3]]
 const flatten = (array) => array.reduce((accu, val)=> accu.concat(val), [])
 ```
 
-### another solution 
-
-
+### Another solution 
+```
+const flatten = (array)=> [].concat(...array)
+```
 Test.assertSimilar(flatten([]), []);
 Test.assertSimilar(flatten([1, 2, 3]), [1, 2, 3]);
 Test.assertSimilar(flatten([[1, 2, 3], ["a", "b", "c"], [1, 2, 3]]), [1, 2, 3, "a", "b", "c", 1, 2, 3]);
