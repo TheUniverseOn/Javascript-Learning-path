@@ -30,7 +30,7 @@ Enjoy Learning !!
 
 
 
-
+### SOLUTION 
 ```
 function minValue(values){
   //your code here
@@ -46,6 +46,14 @@ function minValue(values){
   
  //console.log(Array.from(foo)) //['f', 'o', 'o']
   ```
+  
+  
+    ```
+    function minValue(values){
+    return +[...new Set(values)].sort().join``
+    
+    }
+      ```
 describe("Basic tests",_=>{
   Test.assertEquals(minValue([1, 3, 1]), 13);
   Test.assertEquals(minValue([4, 7, 5, 7]), 457);
