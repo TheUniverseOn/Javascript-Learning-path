@@ -13,7 +13,18 @@ If the value is a multiple of 3 & 5: use the value 'FizzBuzz' instead
 C# method calling example:
 
 string[] result = FizzBuzz.GetFizzBuzzArray(3); // => [ "1", "2", "Fizz" ]
-
+### My solution 
+```
+function fizzbuzz(n) {
+  return [...Array(n+1).keys()].slice(1).map(x=>x%15===0?'FizzBuzz':x%3===0?'Fizz':x%5===0?'Buzz':x);
+}
+```
+### Solution
+```
+function fizzbuzz(n) {
+return Array.apply(null, new Array(n)).map((num, index)=> (++index % 3 ? ''  : 'Fizz' ) + (index % 5 ? '' : 'Buzz') || index)
+}
+```
 
 
 describe('Fizzbuzz', function() {
