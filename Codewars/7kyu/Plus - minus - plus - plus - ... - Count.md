@@ -14,6 +14,28 @@ return count
    }
 ```
 
+```
+function catchSignChange = (arr){
+var count = 0
+for(var i = 1; i < arr.length; i++){
+if((arr[i-1] < 0 && arr[i] >=0 ) ||(arr[i-1] >= 0 && arr[i] < 0)){
+count++
+}
+}
+return count; 
+}
+
+```
+
+### Intialise count at 0; 
+for each number in arr after arr[0]
+  if previous number is positive and current number is non-positive OR previous number negative and current number is non-negative 
+  increment count 
+  return count 
+  if array is empty, return 0
+
+
+
 Count how often sign changes in array.
 
 result
