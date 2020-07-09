@@ -21,6 +21,14 @@ for(let i=0; i< journey.length; i++){
   }
 }
 
+### Another solution 
+```
+function londonCityHacker(journey) {
+let busFare = 0; 
+return `${ journey.map((j, index)=> isNan(j) ( busFare=0, 2.4) : busFare=1.5-busFare ).reduce((v,w)=> v+w, 0).toFixed(2)}`
+
+}
+```
 ### tests
 Test.assertEquals(londonCityHacker([12, 'Central', 'Circle', 21]), "£7.80");
 Test.assertEquals(londonCityHacker(['Piccidilly', 56]), "£3.90");
