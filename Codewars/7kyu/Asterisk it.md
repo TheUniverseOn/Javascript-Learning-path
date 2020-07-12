@@ -1,0 +1,24 @@
+ask
+You are given a function that should insert an asterisk (*) between every pair of even digits in the given input, and return it as a string. If the input is a sequence, concat the elements first as a string.
+
+Input
+The input can be an integer, a string of digits or a sequence containing integers only.
+
+Output
+Return a string.
+
+Examples
+5312708     -->  "531270*8"
+"0000"      -->  "0*0*0*0"
+[1, 4, 64]  -->  "14*6*4"
+Have fun!
+```
+
+function asteriscIt(n) { 
+ 
+n = Array.isArray(n) ? n.join('') : n
+let even= n.toString().split('').map((currentValue, index, num)=> currentValue%2 ===0&&num[index+1]%2===0 ? `${currentValue}*`: currentValue).join('')+''
+return even
+};
+
+```
