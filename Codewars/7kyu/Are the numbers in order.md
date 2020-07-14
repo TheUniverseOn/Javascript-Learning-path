@@ -24,12 +24,18 @@ for(var i = 0; i < arr.length; i++){
 
 return true
 ```
-
+```
 ### Another solution 
 function isAscOrder(arr){
 return arr.slice(1).every((x, i)=> x >= arr[i]
 }
-
+```
+```
+### Another solution 
+function isAscOrder(arr){
+return arr.every((_, i)=> i==0||arr[i]>arr[i-1]
+}
+```
 console.log('Description Examples');
 
 Test.expect(inAscOrder([1, 2, 4, 7, 19]), 'The list of numbers "1, 2, 4, 7, 19" is in ascending order');
