@@ -29,6 +29,7 @@ function solve(a,b){
 ```
 const solve = (a,b)=> (a+b).split('').filter(x=> !a.includes(x) || !b.includes(x)).join('')
 ```
+const solve = (a, b)=> (a+b).split('').filter(x=> a.includes(x) ^ b.includes(x)).join('')
 describe("Basic tests", function(){
 Test.assertEquals(solve("xyab","xzca"),"ybzc");
 Test.assertEquals(solve("xyabb","xzca"),"ybbzc");
