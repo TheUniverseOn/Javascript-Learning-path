@@ -13,5 +13,12 @@ return x.sort().reduce((accu, curr)=> curr> accu ? accu : curr + 1, 0 )
 }
 ```
 
+function getMissingElement(x){
+for(i = 0; i < 10; i++){
+if(x.indexOf(i)  === -1) return i
+}
+}
+```
+
 Test.assertEquals(getMissingElement( [0,5,1,3,2,9,7,6,4]), 8);
 Test.assertEquals(getMissingElement( [9,2,4,5,7,0,8,6,1]), 3);
