@@ -24,6 +24,8 @@ function myLanguages(results) {
   
   ```
   
+  const myLanguages = results => Object.keys(results).sort((a,b)=> results[b]-results[a].filter(value=>results[value] > 60))
+  
   #### Testss
   describe("myLanguages", function(){
   it("Fixed tests", function(){
